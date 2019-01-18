@@ -34,7 +34,7 @@ END;
  
  SELECT my_mod(14, 3) reminder
   FROM DUAL;
-    */     
+         
 CREATE OR REPLACE FUNCTION fn_get_country_name(p_country_id NUMBER)
     RETURN VARCHAR2 -- 국가명을 반환하므로 반환 데이터타입은 VARCHAR2
 IS
@@ -45,7 +45,12 @@ BEGIN
     FROM countries
     WHERE country_id = p_country_id;
     
-    RETURN vs_country_name;    
+    RETURN vs_country_name;
+END;
+*/
+
+SELECT fn_get_country_name(52777) COUN1, fn_get_country_name(10000) COUN2
+FROM DUAL;
     
 
 
