@@ -1,0 +1,2 @@
+SELECT my_mod(14, 3) reminder
+FROM DUAL;
